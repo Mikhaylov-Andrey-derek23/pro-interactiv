@@ -1,0 +1,57 @@
+$red: #EE3D48;
+$gray-100:#E5E5E5;
+$secondary: #FAFAFA;;
+
+$container-max-widths: (
+  sm: 375px,
+  md: 375px,
+  lg: 375px,
+  xl: 375px,
+  xxl: 375px
+);
+
+$form-select-border-width: 0;
+$form-select-color: #939598;
+
+$thumbnail-border-color:  $red;
+$thumbnail-border-width: 3px;
+
+$carousel-indicator-active-bg: $red;
+
+$form-check-input-focus-border: $red;
+$form-check-input-checked-color: white;
+$form-check-input-checked-bg-color: $red;
+
+$font-family-sans-serif: 'Work Sans', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+
+@import "./node_modules/bootstrap/scss/bootstrap.scss";
+
+.cursor-pointer{
+  cursor: pointer;
+};
+
+.lower-circle{
+  border-radius: 50%;
+  width: 125px;
+  height: 125px;
+  border: 20px solid #EE3D48;
+  top: 58%;
+  left: -4%;
+};
+
+.top-circles{
+  top: -13px;
+  right: -5px;
+};
+
+.modal-bg{
+  background-color: #00000091;
+}
+
+.header-title{
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 53px;
+}
