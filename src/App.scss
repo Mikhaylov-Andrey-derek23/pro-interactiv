@@ -1,6 +1,7 @@
 $red: #EE3D48;
 $gray-100:#E5E5E5;
-$secondary: #FAFAFA;;
+$secondary: #FAFAFA;
+$info: #F1F2F2; 
 
 $container-max-widths: (
   sm: 375px,
@@ -9,6 +10,12 @@ $container-max-widths: (
   xl: 375px,
   xxl: 375px
 );
+
+$font-sizes: (
+  4: 18px,
+  6: 12px
+ 
+)!default;
 
 $form-select-border-width: 0;
 $form-select-color: #939598;
@@ -46,7 +53,7 @@ $font-family-sans-serif: 'Work Sans', system-ui, -apple-system, "Segoe UI", Robo
 
 .modal-bg{
   background-color: #00000091;
-}
+};
 
 .header-title{
   font-family: 'Roboto Slab';
@@ -54,4 +61,20 @@ $font-family-sans-serif: 'Work Sans', system-ui, -apple-system, "Segoe UI", Robo
   font-weight: bold;
   font-size: 40px;
   line-height: 53px;
+};
+
+.list-service::-webkit-scrollbar {
+  width: 3px;
+  background-color: #f9f9fd;
+}
+
+.list-service::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: $red;
+}
+
+.list-service::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  background-color: #f9f9fd;
 }

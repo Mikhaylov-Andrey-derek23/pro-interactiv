@@ -1,7 +1,7 @@
-import React from 'react';
+import React, {useState} from 'react';
 
-function Booth(){
-
+function Booth( {item} ){
+    // console.log(item);
     return(
         <div>
             <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
@@ -40,41 +40,57 @@ function Booth(){
 
             </div>
 
-            <h5 className="mt-3">Фотобудка с ширмой</h5>
-            <p className="fw-light">Размер: 2м x 1.5м x 2 м</p>
+            <h5 className="mt-3">{item.name}</h5>
+            <p className="fw-light">{item.description}</p>
 
             <p className="text-danger border-bottom border-danger" style={{fontSize: '14px', width: '75px'}}>Доп. опции</p>
-            <div className="bg-secondary overflow-auto" style={{height: '152px'}}>
+
+            <div className="bg-secondary overflow-auto list-service" style={{height: '152px'}}>
                 <div className="d-flex justify-content-around align-items-center">
-                    <img src="img/booth.png" class="d-block w-25" alt="..."/>
+                    <img src="img/booth.png" className="d-block w-25" alt="..."/>
                     <div>
                         <p className="fw-bold">Разработка макета рамки</p>
-                        <p className="text-danger fw-bold">От {new Intl.NumberFormat('ru-RU', {currency : 'rub',style : 'currency' }).format(17000)}</p>
+                        <p className="text-danger fw-bold">От {new Intl.NumberFormat('ru-RU', {currency : 'rub',style : 'currency' }).format(item.price)}</p>
                     </div>
                     <div>
-                        <input class="form-check-input" type="checkbox" value="" />
+                        <input className="form-check-input" type="checkbox" value="" />
                     </div>
                 </div>
                 <div className="d-flex justify-content-around align-items-center">
-                    <img src="img/booth.png" class="d-block w-25" alt="..."/>
+                    <img src="img/booth.png" className="d-block w-25" alt="..."/>
                     <div>
                         <p className="fw-bold">Разработка макета рамки1</p>
-                        <p className="text-danger fw-bold">От {new Intl.NumberFormat('ru-RU', {currency : 'rub',style : 'currency' }).format(17000)}</p>
+                        <p className="text-danger fw-bold">От {new Intl.NumberFormat('ru-RU', {currency : 'rub',style : 'currency' }).format(item.price +100)}</p>
                     </div>
                     <div>
-                        <input class="form-check-input" type="checkbox" value="" />
+                        <input className="form-check-input" type="checkbox" value="" />
                     </div>
                 </div>
                 <div className="d-flex justify-content-around align-items-center">
-                    <img src="img/booth.png" class="d-block w-25" alt="..."/>
+                    <img src="img/booth.png" className="d-block w-25" alt="..."/>
                     <div>
                         <p className="fw-bold">Разработка макета рамки2</p>
-                        <p className="text-danger fw-bold">От {new Intl.NumberFormat('ru-RU', {currency : 'rub',style : 'currency' }).format(17000)}</p>
+                        <p className="text-danger fw-bold">От {new Intl.NumberFormat('ru-RU', {currency : 'rub',style : 'currency' }).format(item.price + 200)}</p>
                     </div>
                     <div>
-                        <input class="form-check-input" type="checkbox" value="" />
+                        <input className="form-check-input" type="checkbox" value="" />
                     </div>
                 </div>
+            </div>
+            <p className="text-muted my-3">Укажите время аренды</p>
+
+            <div>
+                <button className="btn btn-danger text-light m-1 fs-6">1 час</button>
+                <button className="btn btn-info m-1 fs-6">2 часа</button>
+                <button className="btn btn-info m-1 fs-6">3 часа</button>
+                <button className="btn btn-info m-1 fs-6">5 часов</button>
+                <button className="btn btn-info m-2 fs-6">выставка 2 дня</button>
+                <button className="btn btn-info m-2 fs-6">выставка 3 дня</button>
+            </div>
+
+            <div className="d-flex justify-content-around align-items-center py-3">
+                <h2 className="fs-1 fw-bold mx-2">{new Intl.NumberFormat('ru-RU', {currency : 'rub',style : 'currency' }).format(item.price)}</h2>
+                <button className="btn btn-danger text-white fs-4 fw-bold">Оставить заявку</button>
             </div>
 
         

@@ -8,7 +8,9 @@ import PhotoBooths from './PhotoBooths'
 import '../App.scss';
 
 
+
 function App( {modalWindow} ) {
+
   return (
     <div className="container pt-2">
         <Header/>
