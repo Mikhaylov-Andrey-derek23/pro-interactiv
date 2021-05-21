@@ -14,7 +14,7 @@ function App( {modalWindow} ) {
   return (
     <div className="container pt-2">
         <Header/>
-        <PhotoBooths/>
+        {/* <PhotoBooths/> */}
         {modalWindow ? <ModalWindow/> : '' }
     </div>
   );
