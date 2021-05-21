@@ -38,7 +38,7 @@ function PhotoBooths(){
            
 
         }
-    },[valueSelectd])
+    },[items, valueSelectd])
     
 
     return(
